@@ -1,1 +1,33 @@
-defaultNamespace: kube-system
+defaultNamespace: vault
+
+helm:
+  chart: vault
+  repo: https://helm.releases.hashicorp.com
+  releaseName: vault
+  version: 0.19.0
+kustomize:
+  dir: overlay
+targetCustomizations:
+- name: fleetgood
+  helm:
+    values:
+      injector:
+        authPath: auth/kubernetes
+        enabled: true
+        externalVaultAddr: http://external-vault:8200
+  kustomize:
+    dir: overlay/test
+  clusterSelector: {}
+
+#diff:
+#  comparePatches:
+#  - apiVersion: v1
+#    kind: Endpoints
+#    name: vault-agent-injector-svc
+#    operations:
+#    - {"op": "remove", "path":"/webhooks"}
+
+
+
+
+
