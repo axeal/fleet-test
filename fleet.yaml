@@ -19,14 +19,13 @@ targetCustomizations:
     dir: overlay/test
   clusterSelector: {}
 
-#diff:
-#  comparePatches:
-#  - apiVersion: v1
-#    kind: Endpoints
-#    name: vault-agent-injector-svc
-#    operations:
-#    - {"op": "remove", "path":"/webhooks"}
-
+diff:
+  comparePatches:
+  - apiVersion: v1
+    delete: true
+    kind: Endpoints
+    name: vault-agent-injector-svc
+    namespace: vault
 
 
 
