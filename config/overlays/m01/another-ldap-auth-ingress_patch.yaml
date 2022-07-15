@@ -1,0 +1,9 @@
+- op: replace
+  path: /spec/rules/0/host
+  value: ldap-auth.fooba-k8-zz-a01.fooba.com
+- op: replace
+  path: /spec/tls/0/hosts/0
+  value: ldap-auth.fooba-k8-zz-a01.fooba.com
+- op: replace
+  path: /spec/tls/0/secretName
+  value: a01-cluster-wildcard-certificate

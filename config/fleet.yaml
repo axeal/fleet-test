@@ -1,0 +1,12 @@
+defaultNamespace: nginx-auth
+helm:
+  releaseName: oss-k8s-nginx-auth-config
+
+targetCustomizations:
+- name: abcde-k8-ab-a01
+  clusterSelector:
+    matchLabels:
+      fooba.com/clustername: abcde-k8-ab-a01
+  yaml:
+    overlays:
+    - m01

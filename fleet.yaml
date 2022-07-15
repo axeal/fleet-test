@@ -1,28 +1,3 @@
-defaultNamespace: vault
-
+defaultNamespace: nginx-auth
 helm:
-  chart: vault
-  repo: https://helm.releases.hashicorp.com
-  releaseName: vault
-  version: 0.19.0
-targetCustomizations:
-- name: fleetgood
-  helm:
-    values:
-      injector:
-        authPath: auth/kubernetes
-        enabled: true
-        externalVaultAddr: http://external-vault:8200
-  clusterSelector: {}
-
-#diff:
-#  comparePatches:
-#  - apiVersion: v1
-#    kind: Endpoints
-#    name: vault-agent-injector-svc
-#    namespace: vault
-#    operations:
-#    - {"op": "remove", "path": "/"}
-
-
-
+  releaseName: oss-k8s-nginx-auth
