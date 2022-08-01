@@ -1,12 +1,33 @@
-defaultNamespace: nginx-auth
+defaultNamespace: cattle-monitoring-system
 helm:
-  releaseName: oss-k8s-nginx-auth-config
-
+  releaseName: rancher-monitoring-config
 targetCustomizations:
-- name: abcde-k8-ab-a01
-  clusterSelector:
-    matchLabels:
-      fooba.com/clustername: abcde-k8-ab-a01
+- name: local
   yaml:
     overlays:
-    - m01
+      - local
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-display-name: local
+- name: rke-test
+  yaml:
+    overlays:
+      - rke-test
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-display-name: rke-test
+- name: rke-int
+  yaml:
+    overlays:
+      - rke-int
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-display-name: rke-int
+- name: rke-prod
+  yaml:
+    overlays:
+      - rke-prod
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-display-name: rke-prod
+
