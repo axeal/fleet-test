@@ -331,7 +331,7 @@ targetCustomizations:
           storage:
             volumeClaimTemplate:
               spec:
-                storageClassName: vsphere
+                storageClassName: longhorn
         ingress:
           annotations:
             cert-manager.io/cluster-issuer: rancher-issuer
@@ -347,7 +347,7 @@ targetCustomizations:
           storageSpec:
             volumeClaimTemplate:
               spec:
-                storageClassName: vsphere
+                storageClassName: longhorn
         ingress:
           annotations:
             cert-manager.io/cluster-issuer: rancher-issuer
@@ -359,7 +359,7 @@ targetCustomizations:
             - prometheus.rancher.suse
       grafana:
         persistence:
-          storageClassName: vsphere
+          storageClassName: longhorn
         ingress:
           enabled: true
           annotations:
