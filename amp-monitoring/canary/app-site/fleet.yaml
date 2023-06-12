@@ -30,11 +30,11 @@ targetCustomizations:
       grafana:
         ingress:
           hosts:
-            - grafana1.svc-cluster-intern-t.my-cloud.lan
+            - grafana1.svc-cluster-intern-t
       prometheus:
         ingress:
           hosts:
-            - prom1.svc-cluster-intern-t.my-cloud.lan
+            - prom1.svc-cluster-intern-t
 - name: core-test-internet
   # A selector used to match a specific cluster by name.
   clusterSelector:
@@ -47,11 +47,11 @@ targetCustomizations:
       grafana:
         ingress:
           hosts:
-            - grafana1.core-test-internet.core.local
+            - grafana1.core-test-internet
       prometheus:
         ingress:
           hosts:
-            - prom1.core-test-internet.core.local
+            - prom1.core-test-internet
 
 rolloutStrategy:
     # A number or percentage of clusters that can be unavailable during an update
