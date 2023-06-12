@@ -9,7 +9,7 @@ helm:
   # Any values that should be placed in the `values.yaml` and passed to helm during
   # install.
   valuesFiles:
-    - values-app.yaml
+    - values-app-cluster_with_repo.yaml
 
 # Post Helm-Chart Kustomization to fix kube-state-metrics
 kustomize:
