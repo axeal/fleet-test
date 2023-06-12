@@ -1,0 +1,60 @@
+defaultNamespace: monitoring
+helm:
+  repo: https://prometheus-community.github.io/helm-charts
+  chart: kube-prometheus-stack
+
+  version: 45.5.0
+  releaseName: monitoring-lm-app
+
+  # Any values that should be placed in the `values.yaml` and passed to helm during
+  # install.
+  valuesFiles:
+    - values-app.yaml
+
+# Post Helm-Chart Kustomization to fix kube-state-metrics
+kustomize:
+  dir: overlays/base
+
+targetCustomizations:
+# The name of target. If not specified a default name of the format "target000"
+# will be used. This value is mostly for display
+- name: svc-cluster-intern-t
+  # A selector used to match a specific cluster by name.
+  clusterName: svc-cluster-intern-t
+  # Custom Helm options override the options at the root
+  helm:
+    values:
+      # Custom Ingress Rules on per Cluster-Base
+      grafana:
+        ingress:
+          hosts:
+            - grafana1.svc-cluster-intern-t.my-cloud.lan
+      prometheus:
+        ingress:
+          hosts:
+            - prom1.svc-cluster-intern-t.my-cloud.lan
+- name: core-test-internet
+  # A selector used to match a specific cluster by name.
+  clusterName: core-test-internet
+  # Custom Helm options override the options at the root
+  helm:
+    values:
+      kubeTargetVersionOverride: "1.20.8"
+      # Custom Ingress Rules on per Cluster-Base
+      grafana:
+        ingress:
+          hosts:
+            - grafana1.core-test-internet.core.local
+      prometheus:
+        ingress:
+          hosts:
+            - prom1.core-test-internet.core.local
+
+
+rolloutStrategy:
+    # A number or percentage of clusters that can be unavailable during an update
+    # of a bundle. This follows the same basic approach as a deployment rollout
+    # strategy. Once the number of clusters meets unavailable state update will be
+    # paused. Default value is 100% which doesn't take effect on update.
+    # default: 100%
+    maxUnavailable: 15%
