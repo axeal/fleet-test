@@ -20,9 +20,7 @@ targetCustomizations:
 # will be used. This value is mostly for display
 - name: svc-cluster-intern-t
   # A selector used to match a specific cluster by name.
-  clusterSelector:
-    matchLabels:
-      management.cattle.io/cluster-display-name: svc-cluster-intern-t
+  clusterName: svc-cluster-intern-t
   # Custom Helm options override the options at the root
   helm:
     values:
@@ -37,9 +35,7 @@ targetCustomizations:
             - prom1.svc-cluster-intern-t
 - name: core-test-internet
   # A selector used to match a specific cluster by name.
-  clusterSelector:
-    matchLabels:
-      management.cattle.io/cluster-display-name: core-test-internet
+  clusterName: core-test-internet
   # Custom Helm options override the options at the root
   helm:
     values:
