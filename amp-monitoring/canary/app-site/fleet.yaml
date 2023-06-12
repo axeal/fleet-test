@@ -39,7 +39,6 @@ targetCustomizations:
   # Custom Helm options override the options at the root
   helm:
     values:
-      kubeTargetVersionOverride: "1.20.8"
       # Custom Ingress Rules on per Cluster-Base
       grafana:
         ingress:
