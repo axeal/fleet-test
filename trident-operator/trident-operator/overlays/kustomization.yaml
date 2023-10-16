@@ -1,2 +1,4 @@
 patches:
 - ./operator-deployment.yaml
+resources:
+- ./namespace.yaml
