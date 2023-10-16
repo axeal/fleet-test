@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trident-operator
+  namespace: trident-csi
+spec:
+  selector:
+    matchLabels:
+      app: operator.trident.netapp.io
+      io.cattle.field/appId: trident
+      name: trident-operator
+  template:
+    metadata:
+      labels:
+        app: operator.trident.netapp.io
+        io.cattle.field/appId: trident
+        name: trident-operator

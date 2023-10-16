@@ -1,0 +1,11 @@
+#
+# Next iteration: Claim the Trident installation
+
+defaultNamespace: trident-csi
+helm:
+  releaseName: trident
+  repo: https://netapp.github.io/trident-helm-chart
+  chart: trident-operator
+  version: 22.10.0
+kustomize:
+  dir: overlays
