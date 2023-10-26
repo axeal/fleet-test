@@ -2,11 +2,6 @@
 # Next iteration: Claim the Trident installation
 
 defaultNamespace: trident-csi
-namespaceLabels:
-  app.kubernetes.io/managed-by: Helm
-namespaceAnnotations:
-  meta.helm.sh/release-name: trident
-  meta.helm.sh/release-namespace: trident-csi
 helm:
   releaseName: trident
   repo: https://netapp.github.io/trident-helm-chart
