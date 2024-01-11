@@ -1,9 +1,0 @@
-defaultNamespace: default
-diff:
-  comparePatches:
-  - apiVersion: apps/v1
-    kind: Deployment
-    name: nginx
-    namespace: default
-    operations:
-    - {"op": "remove", "path": "/spec/replicas"}
