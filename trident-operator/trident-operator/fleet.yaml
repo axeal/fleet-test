@@ -5,6 +5,7 @@ defaultNamespace: trident-csi
 namespaceLabels:
   pod-security.kubernetes.io/enforce: privileged
   pod-security.kubernetes.io/enforce-version: latest
+  helm.sh/resource-policy: keep
 helm:
   releaseName: trident
   repo: https://netapp.github.io/trident-helm-chart
