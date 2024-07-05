@@ -1,7 +1,7 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: two-test
+  name: nine-test
   namespace: fleet-default
 spec:
   branch: 01534177-one
@@ -13,5 +13,5 @@ spec:
   targets:
     - clusterSelector:
         matchLabels:
-          cluster: two
+          cluster: nine
       name: null
