@@ -11,7 +11,5 @@ spec:
   paths: []
   repo: https://github.com/axeal/fleet-test.git
   targets:
-    - clusterSelector:
-        matchLabels:
-          cluster: four
-      name: null
+  - name: four
+    clusterGroup: four
