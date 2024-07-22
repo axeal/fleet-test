@@ -7,4 +7,4 @@ spec:
   # This is the standard metav1.LabelSelector format to match clusters by labels
   selector:
     matchLabels:
-      cluster: six
+      cluster: '6'
