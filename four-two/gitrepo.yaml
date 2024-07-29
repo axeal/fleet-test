@@ -1,0 +1,15 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: four-test
+  namespace: fleet-default
+spec:
+  branch: 01534177-two
+  correctDrift:
+    enabled: false
+  insecureSkipTLSVerify: false
+  paths: []
+  repo: https://github.com/axeal/fleet-test.git
+  targets:
+  - name: four
+    clusterGroup: four
