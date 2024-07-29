@@ -1,7 +1,7 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: ten-test
+  name: ten-test-two
   namespace: fleet-default
 spec:
   branch: 01534177-two
