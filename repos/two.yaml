@@ -21,5 +21,5 @@ spec:
   branch: 01534177-one
 
   targets:
-  - name: default
-    clusterGroup: default
+  - name: mgmt
+    clusterGroup: mgmt-group
