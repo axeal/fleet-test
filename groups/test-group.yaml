@@ -6,4 +6,4 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: custom
+      management.cattle.io/cluster-display-name: custom
