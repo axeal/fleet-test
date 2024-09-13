@@ -1,0 +1,21 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: one
+  namespace: fleet-default
+spec:
+  # This can be a HTTPS or git URL.  If you are using a git URL then
+  # clientSecretName will probably need to be set to supply a credential.
+  # repo is the only required parameter for a repo to be monitored.
+  #
+  repo: https://github.com/axeal/fleet-test.git
+
+  # Enforce all resources go to this target namespace. If a cluster scoped
+  # resource is found the deployment will fail.
+  #
+  # targetNamespace: app1
+
+  # Any branch can be watched, this field is optional. If not specified the
+  # branch is assumed to be master
+  #
+  branch: 01534177-one
