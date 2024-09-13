@@ -20,6 +20,6 @@ spec:
   #
   branch: 01534177-one
 
-  targetNamespace:
+  targets:
   - name: test
     clusterGroup: test-group
