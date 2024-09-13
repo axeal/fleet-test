@@ -19,3 +19,7 @@ spec:
   # branch is assumed to be master
   #
   branch: 01534177-one
+
+  targetNamespace:
+  - name: test
+    clusterGroup: test-group
