@@ -22,4 +22,4 @@ spec:
 
   targets:
   - name: mgmt
-    clusterGroup: default
+    clusterGroup: mgmt-group
