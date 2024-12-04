@@ -9,7 +9,7 @@ patches:
       group: ''
       version: v1
       kind: Deployment
-    patch: |-
+    patch: |
       apiVersion: apps/v1
       kind: Deployment
       metadata:
@@ -21,7 +21,7 @@ patches:
       group: ''
       version: v1
       kind: Deployment
-    patch: |-
+    patch: |
       - op: add 
         path: /spec/template/spec/containers/0/env/-
         value:
