@@ -1,0 +1,6 @@
+resources:
+- ../../base
+
+commonAnnotations:
+  aristeo.build.environment: eepp
+
