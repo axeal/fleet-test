@@ -23,6 +23,7 @@ patchesJson6902:
       group: ''
       version: v1
       kind: Deployment
+      name: nginx
     patch: |
       - op: add 
         path: /spec/template/spec/containers/0/env/-
