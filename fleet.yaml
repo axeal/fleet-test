@@ -2,4 +2,4 @@ defaultNamespace: fleet-helm-example
 
 helm:
   releaseName: harbor-staging
-  chart: https://aseymour-gitea.do.support.rancher.space/github/test/raw/branch/master/assests/rancher-logging-crd-105.2.1+up4.10.0.tgz
+  chart: git::https://aseymour-gitea.do.support.rancher.space/github/test//single-cluster/helm
