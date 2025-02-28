@@ -2,4 +2,4 @@ defaultNamespace: fleet-helm-example
 
 helm:
   releaseName: harbor-staging
-  chart: git::https://github.com/rancher/fleet-examples//single-cluster/helm
+  chart: git::https://github.com/rancher/fleet-examples/single-cluster/helm
