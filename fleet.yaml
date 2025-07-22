@@ -1,5 +1,11 @@
-defaultNamespace: fleet-helm-example
+defaultNamespace: default
 
 helm:
-  releaseName: harbor-staging
-  chart: git::https://aseymour-gitea.do.support.rancher.space/github/test//single-cluster/helm
+  releaseName: default
+  repo: https://helm.github.io/examples
+  chart: hello-world
+  valuesFrom:
+    - secretKeyRef:
+        name: helm-values
+        namespace: fleet-default
+        key: values.yaml
