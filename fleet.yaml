@@ -4,8 +4,3 @@ helm:
   releaseName: default
   repo: https://helm.github.io/examples
   chart: hello-world
-  valuesFrom:
-    - secretKeyRef:
-        name: helm-values
-        namespace: fleet-default
-        key: values.yaml
