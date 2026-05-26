@@ -1,4 +1,4 @@
-defaultNamespace: arc-runners
+defaultNamespace: arc-systems
 
 labels:
   app: arc-runner
