@@ -1,6 +1,0 @@
-defaultNamespace: default
-
-helm:
-  releaseName: default
-  repo: https://helm.github.io/examples
-  chart: hello-world
