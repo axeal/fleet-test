@@ -1,4 +1,10 @@
 defaultNamespace: cattle-monitoring-system
 
-namespaceAnnotations:
-  field.cattle.io/projectId: "${ .ClusterLabels.management.cattle.io/cluster-id }:${ .ClusterLabels.system-project-id }"
+#namespaceAnnotations:
+#  field.cattle.io/projectId: "${ .ClusterLabels.management.cattle.io/cluster-id }:${ .ClusterLabels.system-project-id }"
+
+targetCustomizations:
+  - name: production-tier
+    clusterName: custom
+    namespaceAnnotations:
+      field.cattle.io/projectId: "c-m-vjkjjhcb:p-wcwm4"
