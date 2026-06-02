@@ -7,4 +7,4 @@ targetCustomizations:
   - name: production-tier
     clusterName: custom
     namespaceAnnotations:
-      field.cattle.io/projectId: "c-m-vjkjjhcb:p-wcwm4"
+      field.cattle.io/projectId: "${ .ClusterLabels.management.cattle.io/cluster-id }:${ .ClusterLabels.system-project-id }"
