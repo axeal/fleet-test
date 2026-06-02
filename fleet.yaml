@@ -1,4 +1,4 @@
 defaultNamespace: cattle-monitoring-system
 
 namespaceAnnotations:
-  field.cattle.io/projectId: "${ .ClusterLabels.system-project-id }"
+  field.cattle.io/projectId: "c-m-vjkjjhcb:${ .ClusterLabels.system-project-id }"
