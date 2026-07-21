@@ -16,7 +16,7 @@ targetCustomizations:
     matchLabels:
       env: do
   namespaceAnnotations:
-    field.cattle.io/projectId: c-m-2mzdt4fm:do-infra
+    field.cattle.io/projectId: c-m-lsz29q2t:do-infra
 
 - name: custom
   helm:
@@ -26,4 +26,4 @@ targetCustomizations:
     matchLabels:
       env: custom
   namespaceAnnotations:
-    field.cattle.io/projectId: c-m-n8vv9p2x:custom-infra
+    field.cattle.io/projectId: c-m-zn58xqh8:custom-infra
