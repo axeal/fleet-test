@@ -8,12 +8,12 @@ helm:
   - values.yaml
 
 targetCustomizations:
-- name: do
-  clusterName: do
-  namespaceAnnotations:
-    field.cattle.io/projectId: c-m-2mzdt4fm:do-infra
-
 - name: foo
   clusterName: custom
   namespaceAnnotations:
     field.cattle.io/projectId: c-m-n8vv9p2x:custom-infra
+
+- name: do
+  clusterName: do
+  namespaceAnnotations:
+    field.cattle.io/projectId: c-m-2mzdt4fm:do-infra
