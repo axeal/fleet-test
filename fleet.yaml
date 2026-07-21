@@ -9,6 +9,9 @@ helm:
 
 targetCustomizations:
 - name: do
+  helm:
+    values:
+      replicas: 3
   clusterSelector:
     matchLabels:
       env: do
@@ -16,6 +19,9 @@ targetCustomizations:
     field.cattle.io/projectId: c-m-2mzdt4fm:do-infra
 
 - name: custom
+  helm:
+    values:
+      replicas: 2
   clusterSelector:
     matchLabels:
       env: custom
