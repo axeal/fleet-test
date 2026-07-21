@@ -9,15 +9,11 @@ helm:
 
 targetCustomizations:
 - name: do
-  clusterSelector:
-    matchLabels:
-      env: do
+  clusterName: do
   namespaceAnnotations:
     field.cattle.io/projectId: c-m-2mzdt4fm:do-infra
 
 - name: custom
-  clusterSelector:
-    matchLabels:
-      env: custom
+  clusterName: custom
   namespaceAnnotations:
     field.cattle.io/projectId: c-m-n8vv9p2x:custom-infra
