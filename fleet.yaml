@@ -15,8 +15,8 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       env: do
-  namespaceAnnotations:
-    field.cattle.io/projectId: c-m-lsz29q2t:do-infra
+  kustomize:
+    dir: overlays/do
 
 - name: custom
   helm:
@@ -25,5 +25,5 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       env: custom
-  namespaceAnnotations:
-    field.cattle.io/projectId: c-m-zn58xqh8:custom-infra
+  kustomize:
+    dir: overlays/custom
