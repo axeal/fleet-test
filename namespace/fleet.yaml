@@ -1,0 +1,8 @@
+labels:
+  bundle: guestbook-namespace
+helm:
+  values:
+    namespace:
+      name: guestbook
+      annotations:
+        field.cattle.io/projectId: ${ get .ClusterLabels "management.cattle.io/cluster-id" }:${ get .ClusterLabels "default-project-id" }

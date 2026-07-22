@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: guestbook
-  annotations:
-    field.cattle.io/projectId: c-m-ncvdgprw:p-h5pmt

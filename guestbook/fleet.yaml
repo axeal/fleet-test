@@ -1,5 +1,10 @@
 defaultNamespace: guestbook
 
+dependsOn:
+  - selector:
+      matchLabels:
+        bundle: guestbook-namespace
+
 helm:
   takeOwnership: true
   releaseName: guestbook
@@ -15,8 +20,6 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       env: do
-  kustomize:
-    dir: overlays/do
 
 - name: custom
   helm:
@@ -25,5 +28,3 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       env: custom
-  kustomize:
-    dir: overlays/custom

@@ -6,7 +6,10 @@ metadata:
   namespace: fleet-default
 spec:
   repo: https://github.com/axeal/fleet-test.git
-  branch: "01846429-kustomize"
+  branch: "01846429-chart"
+  paths:
+  - namespace
+  - guestbook
   targets:
   - name: custom
     clusterSelector:
