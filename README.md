@@ -9,7 +9,7 @@ spec:
   branch: "01886042"
   paths:
   - Elemental/CRDs
-  - Elemental/Operators
+  - Elemental/Operator
   targets:
    # Match everything
   - clusterSelector: {}
