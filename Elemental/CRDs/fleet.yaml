@@ -1,5 +1,4 @@
 defaultNamespace: cattle-elemental-system
-name: elemental-crds
 
 helm:
   repo: oci://registry.suse.com/rancher/elemental-operator-crds-chart

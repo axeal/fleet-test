@@ -1,5 +1,4 @@
 defaultNamespace: cattle-elemental-system
-name: elemental-operator
 
 dependsOn:
   - selector:
