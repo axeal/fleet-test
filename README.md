@@ -6,17 +6,10 @@ metadata:
   namespace: fleet-default
 spec:
   repo: https://github.com/axeal/fleet-test.git
-  branch: "01846429-chart"
+  branch: "01886042"
   paths:
-  - namespace
-  - guestbook
+  - Elemental/CRDs
+  - Elemental/Operators
   targets:
-  - name: custom
-    clusterSelector:
-      matchLabels:
-        env: custom
-  - name: do
-    clusterSelector:
-      matchLabels:
-        env: do
-```
+   # Match everything
+  - clusterSelector: {}
