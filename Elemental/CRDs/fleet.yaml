@@ -2,7 +2,7 @@ defaultNamespace: cattle-elemental-system
 name: elemental-crds
 
 helm:
-  repo: oci://registry.suse.com/rancher/elemental-operator-crds-chart
+  chart: oci://registry.suse.com/rancher/elemental-operator-crds-chart
   releaseName: elemental-operator-crds
   atomic: true
   waitForJobs: true

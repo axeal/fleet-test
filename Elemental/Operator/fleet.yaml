@@ -7,7 +7,7 @@ dependsOn:
         elemental: crds
 
 helm:
-  repo: oci://registry.suse.com/rancher/elemental-operator-chart
+  chart: oci://registry.suse.com/rancher/elemental-operator-chart
   releaseName: elemental-operator
   atomic: true
   waitForJobs: true
